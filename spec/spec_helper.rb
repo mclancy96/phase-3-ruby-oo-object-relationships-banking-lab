@@ -8,5 +8,5 @@ require_relative '../lib/transfer'
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  config.order = 'default'
+  config.order = 'defined'
 end
