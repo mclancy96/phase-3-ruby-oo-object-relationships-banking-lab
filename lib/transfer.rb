@@ -25,6 +25,14 @@ class Transfer
     @status = 'complete'
   end
 
+  def reverse_transfer
+    return unless @status == 'complete'
+
+    receiver.deposit(amount * -1)
+    sender.deposit(amount)
+    @status = 'reversed'
+  end
+
   private
 
   def sender_has_enough_funds?
